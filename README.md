@@ -57,7 +57,7 @@ The pipeline implements an **AWS Data Lakehouse** following the **Medallion Arch
                                                                          ▼
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                              OUTPUT & CONSUMPTION LAYER                                │
-│  Amazon QuickSight (SPICE Dashboards)  +  Python / Jupyter Notebook Analysis           │
+│                         Amazon QuickSight (SPICE Dashboards)   
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
