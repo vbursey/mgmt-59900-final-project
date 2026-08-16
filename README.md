@@ -6,14 +6,14 @@
 
 ---
 
-## 📌 Project Overview & Business Problem
+## Project Overview & Business Problem
 Traditional taxi operations frequently judge operational success using gross revenue or total trip volume[cite: 3]. However, these aggregate metrics fail to highlight where passenger demand is concentrated, how efficiently specific zones generate revenue, or which routes contribute most heavily to top-line earnings[cite: 3].
 
 This project analyzes **73+ million NYC Yellow Taxi trip records** spanning Q1 2015 and Q1 2016 to evaluate spatial-temporal demand patterns[cite: 3]. By calculating unit-level efficiency metrics—such as **revenue per mile** and **revenue per minute**—and identifying high-density corridors, this pipeline provides operations managers and drivers with empirical insights to optimize vehicle positioning and maximize hourly earning capacity[cite: 3].
 
 ---
 
-## 🏆 Key Empirical Findings & Business Insights
+## Key Empirical Findings & Business Insights
 
 * **Overall Performance (Q1 2015 vs. Q1 2016):**
   * Analyzed **72,265,156 cleaned trips** generating **~$1.12 Billion in total revenue** with an average of **$15.47 revenue per trip**[cite: 3].
@@ -28,7 +28,7 @@ This project analyzes **73+ million NYC Yellow Taxi trip records** spanning Q1 2
 
 ---
 
-## 🏗️ Serverless AWS Lakehouse Architecture
+## Serverless AWS Lakehouse Architecture
 
 The pipeline implements an **AWS Data Lakehouse** following the **Medallion Architecture** pattern (Bronze → Silver → Gold)[cite: 3]. Redshift was eliminated in favor of an Athena-only serverless model, executing all validation, feature engineering, and dimensional aggregations via SQL CTAS queries[cite: 3].
 
@@ -69,7 +69,7 @@ The pipeline implements an **AWS Data Lakehouse** following the **Medallion Arch
 
 ---
 
-## 📊 Medallion Pipeline Specifications
+## Medallion Pipeline Specifications
 
 | Layer | Prefix Path | Format | Record Count | Description & Purpose |
 | :--- | :--- | :--- | :--- | :--- |
@@ -85,7 +85,7 @@ The pipeline implements an **AWS Data Lakehouse** following the **Medallion Arch
 
 ---
 
-## ⚙️ Repository Setup & Query Execution Flow
+## Repository Setup & Query Execution Flow
 
 ### 1. Ingestion & Cataloging
 * Land raw Parquet files into `s3://mgmt-59900-final-project/raw/yellow-taxi/year=YYYY/month=MM/`[cite: 3].
@@ -101,7 +101,7 @@ The pipeline implements an **AWS Data Lakehouse** following the **Medallion Arch
 
 ---
 
-## 💵 Cost Management & Governance Strategy
+## Cost Management & Governance Strategy
 
 * **Total Project Execution Cost:** **< $1.00**[cite: 3].
 * **Storage Optimization:** Raw Parquet files compression reduced ~73M rows into ~2–3 GB of storage (~$0.10/month)[cite: 3].
@@ -112,7 +112,7 @@ The pipeline implements an **AWS Data Lakehouse** following the **Medallion Arch
 
 ---
 
-## ⚖️ Architecture Trade-Off: AWS Lakehouse vs. GCP Data Warehouse
+## Architecture Trade-Off: AWS Lakehouse vs. GCP Data Warehouse
 
 | Evaluation Criteria | AWS Lakehouse (Athena + S3)[cite: 3] | GCP Data Warehouse (BigQuery + GCS)[cite: 3] |
 | :--- | :--- | :--- |
@@ -123,7 +123,7 @@ The pipeline implements an **AWS Data Lakehouse** following the **Medallion Arch
 
 ---
 
-## ⚠️ Limitations & Future Improvements
+## Limitations & Future Improvements
 
 ### Current Limitations:
 1. **Absence of Operating Cost Data:** The dataset lacks driver operating expenses (fuel, vehicle maintenance, insurance, and labor rates), restricting metrics to gross revenue efficiency rather than net profitability[cite: 3].
@@ -137,7 +137,7 @@ The pipeline implements an **AWS Data Lakehouse** following the **Medallion Arch
 
 ---
 
-## 📁 Repository Directory Structure
+## Repository Directory Structure
 
 ```text
 mgmt-59900-final-project/
@@ -172,5 +172,5 @@ mgmt-59900-final-project/
 
 ---
 
-## 🤖 Generative AI Disclosure
+## Generative AI Disclosure
 Generative AI tools (including LLMs) were utilized throughout this project for technical brainstorming, SQL CTAS query optimization, AWS architecture troubleshooting, and documentation editing[cite: 3]. All AI-generated suggestions, code scripts, mathematical calculations, and analytical conclusions were independently audited, executed, and verified by the team prior to submission[cite: 3].
