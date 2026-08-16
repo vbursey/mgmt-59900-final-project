@@ -154,8 +154,6 @@ mgmt-59900-final-project/
 │   ├── 02_silver_cleaning_ctas.sql    # Data quality profiling & Silver CTAS queries
 │   └── 03_gold_aggregations_ctas.sql  # Monthly, Zone, and Route aggregation CTAS queries
 │
-├── notebooks/                         # Python & Colab analysis
-│   └── nyc_taxi_eda_visualization.ipynb
 │
 ├── screenshots/                       # Implementation evidence
 │   ├── figure1_s3_raw_partitioning.png
